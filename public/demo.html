@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/jq.js"></script>
+</head>
+<body>
+<div style="margin-left: 40%">
+    <p><h1 id="demo">开始抽奖</h1></p>
+    <p id="name"></p>
+    <div style="margin-left: 5%">
+        <p>
+            <button type="button" id="start"> 开始抽奖</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" id="stop"> 停止</button>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    var imgs;
+    $.ajax({
+        url:'http://www.api.com/getImg',
+        dataType:'json',
+        asyne:false,
+        success:function (res) {
+            imgs=res;
+        }
+    });
+    $(function () {
+        var start=document.querySelector('#start');
+        var stop=document.querySelector('#stop');
+        var demo=document.querySelector('#demo');
+        var name=document.querySelector('#name');
+
+        start.addEventListener('click',function () {
+            test();
+        });
+        stop.addEventListener('click',function () {
+            clearInterval(_time);
+        });
+
+
+
+        function test(){
+            _time=setInterval(function(){
+                var num=Math.ceil(Math.random()*80);
+                demo.innerHTML="<img width=400px height=400px src='/images/20190604/"+imgs[num]+"' alt='暂无图片'>";
+                name.innerHTML=imgs[num];
+            },100);
+        }
+    })
+</script>

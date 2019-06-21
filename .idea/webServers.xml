@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f1c9f13f-d979-4c49-9cda-3fade54bef7f" name="aliyun" url="http://www.chuan319.top/">
+        <fileTransfer host="www.chuan319.top" port="22" rootFolder="/data/wwwroot/default/education" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="gb2312">
+    <title>抽奖活动</title>
+    <style>
+    *{
+        margin:0;padding:0;
+    }
+    #title{
+        color:red;text-align:center;margin:0 auto;width:240px;height:70px;padding-top:10px;background:opacity(0);
+    }
+    .btns{
+        width:190px;height:30px;margin:0px auto;
+    }
+    .btns span{
+        display:block;float:left;width:80px;height:28px;text-align:center;background:#036;color:#fff;cursor:pointer;border:1px solid #eee;border-radius:8px;font-family:"微软雅黑";font-size:14px;line-height:28px;margin-right:10px;
+    }
+    #txt{
+        font-size:14px;color:#ccc999;text-align:center;margin:0 auto;width:190px;height:50px;padding-top:10px;
+    }
+    </style>
+    <script>
+    var mytype=["iPhone6s","iPad Air2","DELL外星人","键鼠套装","1000元超市购物卡","200元话费充值卡","谢谢参与","品牌耳机","港澳台7日游","50元优惠券"],//定义奖品池
+        timer=null,
+        count=0;
+    //加载时触发
+    window.onload=function(){
+        var start = document.getElementById("start");
+        var stop = document.getElementById("stop");
+
+        start.onclick=startFun;//这个函数后面加括号，就直接调用了该函数，所以不要加
+        stop.onclick=stopFun;
+
+        //绑定键盘事件
+        document.onkeyup=function(e){
+            e = e || window.event;
+            if(e.keyCode==13){
+                if(count==0){
+                    startFun();
+                    count=1;
+                }
+                else{
+                    stopFun();
+                    count=0;
+                }
+            }
+        }
+    }
+
+    //点击开始，标题栏开始轮动
+    function startFun(){
+        clearInterval(timer);//开始时，清除计时器，避免二次触发
+        var title = document.getElementById("title");
+        var start = document.getElementById("start");
+
+        timer = setInterval(function(){
+            var num= Math.floor(Math.random()*mytype.length);
+            title.innerHTML=mytype[num];
+        },50);
+        start.style.background="#ccc";
+
+    }
+    //点击停止，标题栏停止轮动并输出轮动结果
+    function stopFun(){
+        var start = document.getElementById("start"),
+            txt = document.getElementById("txt"),
+            title = document.getElementById("title");
+        clearInterval(timer);//清除计时器，停止计时器
+        start.style.background="#036";
+    }
+
+
+</script>
+<body>
+<div>
+    <h2 id="title">开始抽奖！</h2>
+    </div>
+<div class="btns">
+    <span id="start">开始</span>
+    <span id="stop">停止</span>
+    </div>
+<div id="txt">支持回车键(Enter)开始/停止。</div>
+</body>
+</html>

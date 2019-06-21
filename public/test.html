@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    // var arr=[1,20,19,32,2];
+    // function checksize(age){
+    //     return age<18;
+    // }
+    // console.log(arr.map(checksize));
+    // var obj={
+    //     name:'张三',
+    //     age:18,
+    //     demo:function (a) {
+    //         return a+this.name+this.age;
+    //     }
+    // };
+    //
+    // var obj2={
+    //     name:'李四',
+    //     age:1,
+    // };
+    //
+    // console.log(obj.demo.apply(obj2,['你好']));
+    // console.log(obj.demo.call(obj2,'哈哈哈'));
+    // console.log(obj.demo.bind(obj2)('嘿嘿嘿'));
+
+    function demo(n){
+        console.log(arguments);
+
+        // if(n<=1){
+        //     return 1;
+        // }
+        // return n+arguments.callee(n-1);
+    }
+
+    // console.log(demo(3));
+
+     
+    var arr=[1,2,3];
+    console.log(arr.isArray);
+    // console.log(arr);
+    // var arr=[name=>'张三',pwd=>'123']
+    // console.log(arr);
+</script>

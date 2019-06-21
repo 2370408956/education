@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>良心教育</title>
+	<meta charset="utf-8">
+	<!-- 响应式 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/statics/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/statics/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/statics/css/index.css">
+</head>
+<body>
+	<div class="container" >
+		<div class="row">
+		<!-- 导航条 -->
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+			  <div class="container">
+			    	<div class="navbar-header">
+				      <a class="navbar-brand" href="#">后台管理中心</a>
+				    </div>
+				    <!-- 导航 -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      
+				      <ul class="nav navbar-nav navbar-right">
+				        <li class="active"><a href="#">内容中心</a></li>
+				        <li><a href="#">用户中心</a></li>
+				        <li><a href="#">安全中心</a></li>
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">设置<span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#">修改密码</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">退出</a></li>
+				          </ul>
+				        </li>
+				      </ul>
+				    </div><!-- /.navbar-collapse -->
+			  </div>
+			</nav>
+		</div>
+  		<div class="content row">
+
+  			<div class="col-md-4">
+  				<div class="list-group">
+				  <a href="#" class="list-group-item active">
+				    <i class="fa fa-bars" aria-hidden="true"></i>文章管理
+				  </a>
+				  <a href="#" class="list-group-item">
+				  <i class="fa fa-book" aria-hidden="true"></i>
+				  课程管理
+				  </a>
+				  <a href="#" class="list-group-item">
+				  <i class="fa fa-picture-o" aria-hidden="true"></i>
+				  图片管理
+				  </a>
+				  <a href="#" class="list-group-item">
+				  <i class="fa fa-film" aria-hidden="true"></i>
+				  视频管理
+				  </a>
+				</div>
+  			</div>
+			//列表展示
+  			<div class="col-md-8">
+  				<div class="panel panel-default">
+				  <div class="panel-heading">文章管理</div>
+				  <div class="panel-body">
+				       <div class="row">
+				       		<table class="article-table table table-bordered table-hover">
+				  			<tr>
+				  				<th></th>
+				  				<th>id</th>
+				  				<th>标题</th>
+				  				<th>发布时间</th>
+				  				<th>更新时间</th>
+				  				<th>发布人</th>
+				  				<th>浏览量</th>
+				  				<th>操作</th>
+				  			</tr>
+				  			<tr>
+				  				<td><input type="checkbox"></td>
+				  				<td>1</td>
+				  				<td>昨晚王思聪与周老师吃饭啦</td>
+				  				<td>2019-06-04</td>
+				  				<td>2019-06-04</td>
+				  				<td>admin</td>
+				  				<td>10000</td>
+				  				<td>
+				  				<a href=""><span class="glyphicon glyphicon-eye-open"></span></a>
+				  				<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+				  				<a href=""><span class="glyphicon glyphicon-trash"></span></a></td>
+				  			</tr>
+						</table>
+				       </div>
+				  	   <div class="row">
+				  			<div class="col-md-7">
+				  				<button type="button" class="btn-link">全选</button> / 
+				  				<button type="button" class="btn-link">反选</button>
+				  				<button type="button" class="btn btn-primary">添加</button>
+				  				<button type="button" class="btn btn-warning">删除</button>
+				  			</div>
+				  			<nav aria-label="Page navigation" class="col-md-5" >
+							  <ul class="pagination pull-right">
+							    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+							    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+							     <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+							      <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+							       <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+							        <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+							    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
+							  </ul>
+							</nav>
+				  		</div>
+				  </div>
+				</div>
+  			</div>
+  		</div>
+  		<div class="navbar navbar-default navbar-fixed-bottom">
+		  <div class="container-fluid">
+		    <div class="col-md-5 footer">2019-06-04</div>
+		    <div class="col-md-7 footer text-right">1809phpB版权所有</div>
+		  </div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+	<script src="statics/js/bootstrap.min.js"></script>
+</body>
+</html>
